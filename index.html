@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Martin Höne</title>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="color-scheme" content="dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111'/%3E%3Ctext x='32' y='42' font-family='Helvetica,Arial,sans-serif' font-size='26' font-weight='600' fill='%23fff' text-anchor='middle'%3EMH%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      --bg: #0f1d3a;
+      --ink: #f3f5fa;
+      --muted: #8d9bb8;
+      --line: #22345a;
+      --hover: #15274b;
+      --accent: #7fa6ff;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      padding: 0 24px;
+    }
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 64px 0;
+    }
+    h1 {
+      font-size: clamp(34px, 9vw, 44px);
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin: 0 0 40px;
+    }
+    ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+    li { border-bottom: 1px solid var(--line); }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 4px;
+      color: var(--ink);
+      text-decoration: none;
+      font-size: 17px;
+      transition: background .15s, padding .15s;
+    }
+    a:hover { background: var(--hover); padding-left: 12px; padding-right: 12px; }
+    a span { color: var(--accent); font-size: 18px; transition: transform .15s; }
+    a:hover span { transform: translate(2px, -2px); }
+    footer {
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      padding: 0 0 28px;
+    }
+    footer i { font-style: normal; margin: 0 6px; opacity: .6; }
+    footer a.ds { display: inline; padding: 0; font-size: 13px; color: var(--muted); }
+    footer a.ds:hover { background: none; color: var(--ink); padding: 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Martin Höne</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/martin-h%C3%B6ne" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span></a></li>
+      <li><a href="https://www.jura.uni-bonn.de/de/forschung-und-lehre/lehrende/prof-dr-benjamin-raue/team/wissenschaftliche-mitarbeiterinnen-und-mitarbeiter/martin-hoene-ll-m#content" target="_blank" rel="noopener noreferrer">Universität Bonn <span aria-hidden="true">↗</span></a></li>
+      <li><a href="#" id="mail">E-Mail <span aria-hidden="true">→</span></a></li>
+    </ul>
+  </main>
+  <footer>© Martin Höne <i>·</i> <a class="ds" href="datenschutz.html">Datenschutz</a></footer>
+  <script>
+    document.getElementById('mail').addEventListener('click', function (e) {
+      e.preventDefault();
+      var u = ['web', 'martin-hoene', 'de'];
+      location.href = 'mailto:' + u[0] + '@' + u[1] + '.' + u[2];
+    });
+  </script>
+</body>
+</html>
